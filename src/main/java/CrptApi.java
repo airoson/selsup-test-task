@@ -31,6 +31,12 @@ public class CrptApi {
         semaphore = new Semaphore(requestLimit);
     }
 
+    /**
+     * Метод, вызывающий API честного знака
+     * @param document документ для ввода товара
+     * @param sign подпись
+     * @return код ответа
+     */
     public int callApi(Document document, String sign){
         try{
             semaphore.acquire();
